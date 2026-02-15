@@ -1,0 +1,225 @@
+# Portfolio Website Build Prompt for AI Engineer
+
+## Project Overview
+Build a modern, professional portfolio website for an AI Engineer that showcases technical expertise, projects, and professional experience. The site should have a sophisticated, mechanical aesthetic with smooth animations and interactive elements.
+
+## Data Source
+- **GitHub Repository**: https://github.com/Alli-Ekundayo
+- Extract and display: repositories, project descriptions, technologies used, contribution statistics, and pinned projects
+- Fetch profile information including bio, location, and links
+
+## Design Requirements
+
+### Hero Section - Animated Mechanical Blueprint
+**Primary Feature**: An animated exploded blueprint diagram (choose one):
+- Option 1: Mechanical watch (showing gears, springs, escapement mechanism)
+- Option 2: Jet engine (turbine blades, combustion chamber, compressor stages)
+- Option 3: Other intricate mechanical device (clockwork mechanism, transmission system)
+
+**Animation Specifications**:
+- Start with assembled view, then smoothly explode/separate components
+- Each component should float outward from center with subtle rotation
+- Display thin connecting lines (blueprint style) between related parts
+- Components should be labeled with technical annotations (like engineering drawings)
+- Use monochromatic color scheme: blues/teals on dark background OR sepia/charcoal on light background
+- Animation should loop: explode → pause → reassemble → pause → repeat
+- Smooth easing functions (ease-in-out) for professional feel
+- Duration: 8-12 seconds per complete cycle
+- Implement using SVG or Canvas for crisp rendering
+- Should be responsive and scale on different screen sizes
+
+### Color Scheme & Typography
+- **Primary Colors**: 
+  - Background: Deep charcoal (#1a1a1a) or dark navy (#0f1419)
+  - Accent: Electric blue (#2d8cf0) or cyan (#00d9ff)
+  - Text: Light gray (#dedede) with white (#ffffff) for emphasis
+- **Typography**:
+  - Headings: Modern sans-serif (Inter, Poppins, or Space Grotesk)
+  - Body: Clean, readable sans-serif (System UI, Segoe UI, or Roboto)
+  - Code snippets: Monospace (JetBrains Mono, Fira Code)
+
+### Layout Sections
+
+1. **Hero Section**
+   - Animated mechanical blueprint as background
+   - Name and title overlay ("AI Engineer")
+   - Brief tagline (1-2 sentences about specialization)
+   - CTA buttons using the provided button design
+
+2. **About Section**
+   - Professional headshot or avatar
+   - Bio paragraph highlighting AI/ML expertise
+   - Key skills with visual indicators (progress bars or icon badges)
+   - Specializations: NLP, Computer Vision, Deep Learning, MLOps, etc.
+
+3. **Projects Showcase**
+   - Grid layout of GitHub repositories (3 columns on desktop, responsive)
+   - Each project card should display:
+     - Project name and description
+     - Primary language and tech stack icons
+     - GitHub stars/forks count
+     - "View Project" button (using provided design)
+     - "Live Demo" button if applicable (using provided design)
+   - Filter by technology tags
+   - Sort by: Recent, Most Starred, Language
+
+4. **Skills & Technologies**
+   - Visual grid of technology logos/icons
+   - Categories: Languages, Frameworks, Tools, Cloud Platforms
+   - Hover effects showing proficiency level
+
+5. **Experience/Timeline** (if data available)
+   - Professional experience
+   - Education
+   - Certifications
+   - Publications or notable contributions
+
+6. **Contact Section**
+   - Email contact form or mailto link
+   - Social links: GitHub, LinkedIn, Twitter, etc.
+   - "Download Resume" button (using provided design)
+   - Location information if provided
+
+## Uniform Button Styling
+**ALL buttons across the site must use this exact design:**
+
+```html
+<button type="button" class="button">
+  <span class="button__text">[Button Text]</span>
+  <span class="button__icon">
+    <svg class="svg" data-name="Layer 2" id="bdd05811-e15d-428c-bb53-8661459f9307" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
+      <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
+      <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
+    </svg>
+  </span>
+</button>
+```
+
+```css
+.button {
+  --main-focus: #2d8cf0;
+  --font-color: #dedede;
+  --bg-color-sub: #222;
+  --bg-color: #323232;
+  --main-color: #dedede;
+  position: relative;
+  width: 150px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  background-color: var(--bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.button, .button__icon, .button__text {
+  transition: all 0.3s;
+}
+
+.button .button__text {
+  transform: translateX(21px);
+  color: var(--font-color);
+  font-weight: 600;
+}
+
+.button .button__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 39px;
+  background-color: var(--bg-color-sub);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button .svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.button:hover {
+  background: var(--bg-color);
+}
+
+.button:hover .button__text {
+  color: transparent;
+}
+
+.button:hover .button__icon {
+  width: 148px;
+  transform: translateX(0);
+}
+
+.button:active {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px var(--main-color);
+}
+```
+
+**Button Variations Needed**:
+- Replace the download SVG icon with appropriate icons for different actions:
+  - External link icon for "View Project" / "Visit Site"
+  - GitHub icon for "View Code"
+  - Email/contact icon for "Get in Touch"
+  - Keep download icon for "Download Resume"
+
+## Technical Implementation
+
+### Tech Stack Recommendation:
+- **Frontend**: React with TypeScript or Next.js (for SEO)
+- **Styling**: TailwindCSS + custom CSS for button component
+- **Animations**: Framer Motion or GSAP for mechanical blueprint
+- **API Integration**: GitHub REST API or GraphQL API
+- **Deployment**: Vercel, Netlify, or GitHub Pages
+
+### Key Features:
+1. **Responsive Design**: Mobile-first, works perfectly on tablets and desktops
+2. **Performance**: Fast load times, lazy loading for images
+3. **SEO Optimized**: Meta tags, OpenGraph tags, schema markup
+4. **Accessibility**: WCAG 2.1 AA compliant, keyboard navigation
+5. **Dark Mode**: Default dark theme (optional toggle to light mode)
+6. **Smooth Scrolling**: Animated transitions between sections
+7. **Loading States**: Skeleton screens while fetching GitHub data
+
+### GitHub API Integration:
+```javascript
+// Fetch user data
+GET https://api.github.com/users/Alli-Ekundayo
+
+// Fetch repositories
+GET https://api.github.com/users/Alli-Ekundayo/repos?sort=updated&per_page=20
+
+// Fetch specific repo details
+GET https://api.github.com/repos/Alli-Ekundayo/{repo-name}
+```
+
+## Content Guidelines:
+- Professional but approachable tone
+- Technical accuracy in project descriptions
+- Highlight AI/ML specific achievements
+- Include measurable results where possible (model accuracy, performance improvements, etc.)
+- Show diverse project types (research, applications, tools)
+
+## Additional Polish:
+- Smooth page transitions
+- Hover effects on project cards (subtle lift and glow)
+- Cursor effects (optional: custom cursor that reacts to interactive elements)
+- Subtle parallax scrolling
+- Loading animation that ties into the mechanical theme
+- Easter eggs for developers who inspect the code
+
+## Deliverables:
+1. Fully functional, responsive portfolio website
+2. Clean, well-commented code
+3. README with setup instructions
+4. Optimized assets and animations
+5. Cross-browser tested (Chrome, Firefox, Safari, Edge)
+
+---
+
+**Priority**: The mechanical blueprint animation and uniform button styling are the signature elements that must be executed flawlessly. These define the unique aesthetic of the portfolio.
