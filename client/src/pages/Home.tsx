@@ -152,13 +152,13 @@ export default function Home() {
             loop
             muted
             playsInline
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover opacity-60"
           >
             <source src={videoBg} type="video/mp4" />
           </video>
           {/* Dark Overlay Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent" />
-          <div className="absolute inset-0 bg-background/40 backdrop-blur-[1px]" />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+          <div className="absolute inset-0 bg-background/20 backdrop-blur-[1px]" />
         </div>
 
         <div className="container relative z-10 px-6 pt-20">
