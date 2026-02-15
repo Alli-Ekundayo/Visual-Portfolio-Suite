@@ -1,6 +1,8 @@
 import { z } from "zod";
 import { insertMessageSchema, messages } from "./schema";
 
+export type { InsertMessage, Message } from "./schema";
+
 export const api = {
   messages: {
     create: {

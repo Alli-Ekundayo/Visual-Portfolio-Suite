@@ -13,7 +13,8 @@ import {
   Database, 
   Network, 
   Terminal,
-  Download
+  Download,
+  Phone
 } from "lucide-react";
 
 import { insertMessageSchema } from "@shared/schema";
@@ -307,7 +308,17 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm font-mono text-primary/80">Email Me</p>
-                    <p className="text-lg font-medium">hello@alliekundayo.com</p>
+                    <p className="text-lg font-medium">alliekundayo6@gmail.com</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4 text-muted-foreground hover:text-white transition-colors">
+                  <div className="p-3 bg-white/5 rounded-lg border border-white/10 text-primary">
+                    <Phone className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-mono text-primary/80">Call Me</p>
+                    <p className="text-lg font-medium">07033443931</p>
                   </div>
                 </div>
 
@@ -317,7 +328,7 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-sm font-mono text-primary/80">LinkedIn</p>
-                    <a href="https://linkedin.com/in/alli-ekundayo" className="text-lg font-medium hover:underline">Alli Ekundayo</a>
+                    <a href="https://www.linkedin.com/in/alli-ekundayo-b30181373" className="text-lg font-medium hover:underline">Alli Ekundayo</a>
                   </div>
                 </div>
 
@@ -397,8 +408,8 @@ export default function Home() {
           <p>© 2024 Alli Ekundayo. All rights reserved.</p>
           <div className="mt-4 md:mt-0 flex gap-6">
             <a href="https://github.com/Alli-Ekundayo" className="hover:text-primary transition-colors">GITHUB</a>
-            <a href="https://linkedin.com/in/alli-ekundayo" className="hover:text-primary transition-colors">LINKEDIN</a>
-            <a href="mailto:hello@alliekundayo.com" className="hover:text-primary transition-colors">EMAIL</a>
+            <a href="https://www.linkedin.com/in/alli-ekundayo-b30181373" className="hover:text-primary transition-colors">LINKEDIN</a>
+            <a href="mailto:alliekundayo6@gmail.com" className="hover:text-primary transition-colors">EMAIL</a>
           </div>
         </div>
       </footer>
