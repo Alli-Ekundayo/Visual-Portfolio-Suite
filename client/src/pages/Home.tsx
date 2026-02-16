@@ -64,26 +64,28 @@ export default function Home() {
 
   const experienceData = [
     {
-      title: "AI Engineer",
+      title: "AI Software Engineer",
       company: "Direction7 Limited",
-      period: "Nov 2024 - Present",
+      period: "Nov 2025 - Present",
       description: [
-        "Architected scalable AI-driven solutions using LLMs and RAG frameworks.",
-        "Optimized model inference pipelines resulting in 30% latency reduction.",
-        "Integrated multi-agent systems for complex task automation."
+        "Architecting event-driven services and APIs that integrate LLMs with business logic, data stores, and privacy controls.",
+        "Designing and deploying autonomous agents with LangGraph to orchestrate multi-step user workflows with tool use, memory, and guardrails.",
+        "Implementing retrieval and prompt pipelines (vector search, prompt templates, evaluation harness) for trustworthy responses.",
+        "Owning reliability: monitoring, tracing, and CI/CD to keep latency low and availability high in production."
       ],
-      skills: ["LangChain", "OpenAI API", "Python", "Vector DBs"]
+      skills: ["LangGraph", "FastAPI", "Python", "RAG", "Vector Search"]
     },
     {
-      title: "AI Engineer",
+      title: "Machine Learning Engineer",
       company: "Dala Innovation",
-      period: "Jun 2024 - Nov 2024",
+      period: "Mar 2024 - Sep 2025",
       description: [
-        "Developed custom chatbots for client support automation.",
-        "Implemented secure data processing pipelines for sensitive fintech data.",
-        "Collaborated with cross-functional teams to deploy models to production."
+        "Architected and trained Transformer-based machine translation models with the Hugging Face ecosystem for low-resource Nigerian languages.",
+        "Built data pipelines for corpus collection, cleaning, alignment, and augmentation to improve coverage and model robustness.",
+        "Exposed models via a FastAPI micro-service containerized with Docker, enabling reliable real-time inference.",
+        "Established evaluation workflows using automated metrics and human review to track quality and guide error analysis."
       ],
-      skills: ["FastAPI", "Docker", "PostgreSQL", "React"]
+      skills: ["Hugging Face", "Transformers", "FastAPI", "Docker", "NLP"]
     }
   ];
 
